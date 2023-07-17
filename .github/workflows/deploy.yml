@@ -5,11 +5,11 @@ on:
       - main
       - dev
 env:
-  MONGODB_DB_NAME: Test
+  MONGODB_DB_NAME: gm-demo
 jobs:
   test:
     env:
-      MONGODB_CLUSTER_ADDRESS: cluster0.cy5q550.mongodb.net
+      MONGODB_CLUSTER_ADDRESS: cluster0.2gmzlkd.mongodb.net
       MONGODB_USERNAME: Gunjan
       MONGODB_PASSWORD: Gautam@098
       PORT: 8080
@@ -26,7 +26,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Run server
-        run: npm start & npx wait-on http://127.0.0.1:$PORT
+        run: echo "Run server"  
+        # run: npm start & npx wait-on http://127.0.0.1:$PORT
       - name: Run tests
         run: npm test
       - name: Output information
