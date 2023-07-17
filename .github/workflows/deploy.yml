@@ -11,9 +11,8 @@ jobs:
     env:
       MONGODB_CLUSTER_ADDRESS: cluster0.2gmzlkd.mongodb.net
       MONGODB_USERNAME: Gunjan
-      MONGODB_PASSWORD: Gautam@098
+      MONGODB_PASSWORD: XXXXXX
       PORT: 8080
-    # environment: testing
     runs-on: ubuntu-latest
     steps:
       - name: Get Code
@@ -37,6 +36,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Output information
-        run: |        
+        run: |  
+          # Unable to access - env.MONGODB_USERNAME       
           echo "MONGODB_USERNAME: ${{ env.MONGODB_USERNAME }}"
           echo "MONGODB_DB_NAME: ${{env.MONGODB_DB_NAME}}"
