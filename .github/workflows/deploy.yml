@@ -31,12 +31,15 @@ jobs:
       - name: Output information
         run: |
           echo "MONGODB_USERNAME: ${{ env.MONGODB_USERNAME }}"
+          echo "PORT: ${{env.PORT}}"
+          echo "MONGODB_DB_NAME: ${{env.MONGODB_DB_NAME}}"
   deploy:
     needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Output information
         run: |  
-          # Unable to access - env.MONGODB_USERNAME       
+          # Unable to access - env.MONGODB_USERNAME, env.PORT     
           echo "MONGODB_USERNAME: ${{ env.MONGODB_USERNAME }}"
+          echo "PORT: ${{env.PORT}}"
           echo "MONGODB_DB_NAME: ${{env.MONGODB_DB_NAME}}"
